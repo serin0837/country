@@ -1,0 +1,9 @@
+.logo {
+  height: 80px;
+}
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+.country img {
+  height: 200px;
+  width: 250px;
+}
