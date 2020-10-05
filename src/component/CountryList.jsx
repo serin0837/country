@@ -10,7 +10,6 @@ class CountryList extends Component {
     axios
       .get(`https://country-back.herokuapp.com/api/countries`)
       .then(({ data }) => {
-        console.log(data);
         this.setState({ countries: data });
       });
   }
@@ -20,10 +19,19 @@ class CountryList extends Component {
       <main className="country">
         {this.state.countries.map((country) => {
           return (
-            <ul>
-              <li>{country.name}</li>
+            <ul key={country._id}>
+              <li className="countryTitle">{country.name}</li>
               <li>
-                <img src={country.flag}></img>
+                <img src={country.flag} alt={country.name}></img>
+              </li>
+              <li>
+                <strong>Capital:</strong> {country.capital}
+              </li>
+              <li>
+                <strong>Region:</strong> {country.region}
+              </li>
+              <li>
+                <strong>Population:</strong> {country.population}
               </li>
             </ul>
           );

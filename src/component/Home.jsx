@@ -1,7 +1,10 @@
 import React from "react";
-
+import SimpleMap from "./SimpleMap";
 const Home = () => {
-  return <main>Home</main>;
+  return (
+    <main>
+      <SimpleMap />
+    </main>
+  );
 };
-
 export default Home;
