@@ -5,6 +5,7 @@ import Home from "./component/Home";
 import CountryList from "./component/CountryList";
 import Footer from "./component/Footer";
 import logo from "./logo.png";
+import ImaginaryCountry from "./component/ImaginaryCountry";
 
 function App() {
   return (
@@ -26,11 +27,17 @@ function App() {
               Country
             </Link>
           </li>
+          <li className="navbar-item">
+            <Link to="/country" className="nav-link">
+              Imaginary Country
+            </Link>
+          </li>
         </ul>
       </nav>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/country" component={CountryList} />
+        <Route path="/country" component={ImaginaryCountry} />
       </Switch>
       <Footer />
     </div>
