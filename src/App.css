@@ -80,3 +80,8 @@ footer p {
 .footer .fa:hover {
   color: darkslategray;
 }
+
+.dropdown {
+  text-align: center;
+  margin: 1rem;
+}
