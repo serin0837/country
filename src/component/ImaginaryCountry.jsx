@@ -12,13 +12,14 @@ class ImaginaryCountry extends Component {
   };
   handleInput = (event) => {
     const { name, value } = event.target;
+    console.log(name, value);
     this.setState({ [name]: value });
   };
   handleSubmit = (event) => {
     event.preventDefault();
     //add country to database
     axios
-      .post("https://country-back.herokuapp.com/api/countries", {
+      .post("https://country-back.herokuapp.com/api/imaginarycountries", {
         ...this.state,
       })
       .then((response) => {

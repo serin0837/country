@@ -12,17 +12,47 @@ class SimpleMap extends Component {
   };
 
   render() {
+    let locations = [
+      {
+        lat: 53.5,
+        lng: -2.2,
+        name: "I am here",
+        color: "red",
+      },
+      {
+        lat: 64.9,
+        lng: -19,
+        name: "Hello Place 2",
+        color: "blue",
+      },
+      {
+        lat: 18.9,
+        lng: 24.3,
+        name: "Hello Place 3",
+        color: "blue",
+      },
+    ];
     return (
       // how can i put funtion to count marker component?
 
       <div className="map" style={{ height: "90vh", width: "100%" }}>
-        <p>Wow! You have been{}</p>
+        <p>Wow! You have been {locations.length} countries!!!!</p>
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyDP2O3fvdrPTLCE9rie_0Z9kMBdGiE2M1I" }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >
-          <Marker lat={53.5} lng={-2.2} name="I am here ❤" color="red" />
+          {locations.map((location) => {
+            return (
+              <Marker
+                lat={location.lat}
+                lng={location.lng}
+                name={location.name}
+                color={location.color}
+              />
+            );
+          })}
+          {/* <Marker lat={53.5} lng={-2.2} name="I am here ❤" color="red" />
           <Marker lat={64.9} lng={-19} name="I was here!!" color="blue" />
           <Marker lat={62.0} lng={10.0} name="I was here!!" color="blue" />
           <Marker lat={40.0} lng={-4.0} name="I was here!!" color="blue" />
@@ -52,7 +82,7 @@ class SimpleMap extends Component {
             lng={127.5}
             name="I born in here🐣"
             color="yellow"
-          />
+          /> */}
         </GoogleMapReact>
       </div>
     );

@@ -28,7 +28,7 @@ function App() {
             </Link>
           </li>
           <li className="navbar-item">
-            <Link to="/country" className="nav-link">
+            <Link to="/imaginarycountries" className="nav-link">
               Imaginary Country
             </Link>
           </li>
@@ -37,7 +37,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/country" component={CountryList} />
-        <Route path="/country" component={ImaginaryCountry} />
+        <Route path="/imaginarycountries" component={ImaginaryCountry} />
       </Switch>
       <Footer />
     </div>
