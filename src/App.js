@@ -5,7 +5,7 @@ import Home from "./component/Home";
 import CountryList from "./component/CountryList";
 import Footer from "./component/Footer";
 import logo from "./logo.png";
-import ImaginaryCountry from "./component/ImaginaryCountry";
+import ImaginaryCountryList from "./component/ImaginaryCountryList";
 
 function App() {
   return (
@@ -37,7 +37,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/country" component={CountryList} />
-        <Route path="/imaginarycountries" component={ImaginaryCountry} />
+        <Route path="/imaginarycountries" component={ImaginaryCountryList} />
       </Switch>
       <Footer />
     </div>

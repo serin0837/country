@@ -12,3 +12,9 @@
 
 - figure out how to render depends on region?? uhm.. add dropdown but do i need to make each component? or..
 - npm react-bootstrap
+
+- 2020.10.08
+  - conditinal rendering in countryList.jsx // filter and map together!!!!
+  - can make <Marker> better way in simpleMap.jsx// I need to add data base about location
+  - know how to do api call and bring data that only what i need with countries.js and script.js
+  - need to do bootstrap form controller
