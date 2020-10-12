@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import axios from "axios"
 import CreateImaginaryCountry from "./CreateImaginaryCountry"
+import Loader from "./Loader"
 
 class ImaginaryCountryList extends Component {
     state={
         imaginarycountries:[],
+        isLoading:true,
     };
 
     componentDidMount(){
@@ -12,17 +14,18 @@ class ImaginaryCountryList extends Component {
         .get("https://country-back.herokuapp.com/api/imaginarycountries")
         .then(({data})=>{
             console.log(data)
-            this.setState({imaginarycountries:data});
+            this.setState({imaginarycountries:data,isLoading:false});
         })
         .catch(error=>console.log(error))
         
     }
 
     render() {
+      if (this.state.isLoading) return <Loader/>
         return (
            <div>
                 <CreateImaginaryCountry/>
-            <main className="country">
+            <main className="imaginaryCountry">
                 
             {this.state.imaginarycountries
               .map((country) => {

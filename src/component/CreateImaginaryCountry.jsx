@@ -7,7 +7,7 @@ class CreateImaginaryCountry extends Component {
     name: "",
     capital: "",
     region: "",
-    populations: "",
+    population: "",
     flag: "",
   };
   handleInput = (event) => {
@@ -21,16 +21,16 @@ class CreateImaginaryCountry extends Component {
       name:this.state.name,
       capital:this.state.capital,
       region:this.state.region,
-      populations:this.state.populations,
+      population:this.state.population,
       flag:this.state.flag
     }
-    console.log(imaginaryCountry)
+    console.log(imaginaryCountry)//WORKING 
     axios
-      .post("https://country-back.herokuapp.com/api/imaginarycountries", {
+      .post("https://country-back.herokuapp.com/api/imaginarycountries", 
         imaginaryCountry,
-      })
+      )
       .then((response) => {
-        console.log(response.data);
+        console.log(response.data);//ONLY ID AND COUNTRY
 
      window.location="/imaginarycountries"
       });
@@ -38,7 +38,7 @@ class CreateImaginaryCountry extends Component {
   render() {
     return (
       <div>
-      <form className="imaginaryCountry container" onSubmit={this.handleSubmit}>
+      <form className="imaginary-country-form container" onSubmit={this.handleSubmit}>
         <div className="form-group">
         <label>
           Name:
@@ -100,7 +100,7 @@ class CreateImaginaryCountry extends Component {
         </label>
         </div>
       <div className="form-group">
-        <button  className="btn btn-primary" type="submit">Add Country!</button>
+        <button  className="btn btn-primary" type="submit">Add your Imaginary Country!</button>
         </div>
       </form>
    </div>

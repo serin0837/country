@@ -1,3 +1,10 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar-item {
+  font-size: 20px;
+}
 .logo {
   height: 80px;
 }
@@ -17,7 +24,8 @@
   list-style: none;
 }
 .countryTitle {
-  font-size: 1.2rem;
+  font-size: 23px;
+  color: #42d7e6;
 }
 .map {
   padding: 1rem;
@@ -88,4 +96,27 @@ footer p {
 
 .mainp {
   font-size: large;
+}
+
+.imaginary-country-form {
+  text-align: center;
+}
+
+.imaginaryCountry img {
+  height: 400px;
+  width: 450px;
+}
+.imaginaryCountry ul {
+  text-align: center;
+}
+.imaginaryCountry li {
+  list-style: none;
+}
+
+.imaginaryCountry {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-gap: 4rem;
+  margin: 0rem auto;
+  padding: 1rem 2rem;
 }

@@ -29,7 +29,7 @@ class SimpleMap extends Component {
     return (
       // how can i put funtion to count marker component?
       <div className="map" style={{ height: "90vh", width: "100%" }}>
-        <p className="mainp">Wow! You have been {locations.length} countries!!!!</p>
+        <p className="mainp">Wow! You have been {locations.length} countries!!!!😎</p>
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyDP2O3fvdrPTLCE9rie_0Z9kMBdGiE2M1I" }}
           defaultCenter={this.props.center}
@@ -38,6 +38,7 @@ class SimpleMap extends Component {
           {locations.map((location) => {
             return (
               <Marker
+                key={location._id}
                 lat={location.lat}
                 lng={location.lng}
                 name={location.description}
