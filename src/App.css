@@ -19,6 +19,7 @@ body {
   border: black 1px solid;
   border-radius: 5px;
   padding: 1rem;
+  text-align: center;
 }
 .country li {
   list-style: none;
@@ -103,11 +104,12 @@ footer p {
 }
 
 .imaginaryCountry img {
-  height: 400px;
-  width: 450px;
+  height: 300px;
+  width: 280px;
 }
 .imaginaryCountry ul {
   text-align: center;
+  padding: 1rem;
 }
 .imaginaryCountry li {
   list-style: none;
@@ -115,8 +117,7 @@ footer p {
 
 .imaginaryCountry {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 4rem;
-  margin: 0rem auto;
-  padding: 1rem 2rem;
+  margin: 1rem auto;
 }
