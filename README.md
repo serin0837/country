@@ -11,6 +11,6 @@ You can :
 ## Technologies
 
 - Front end: Responsive website built with React, Router and Axios.
-
+  [Live]https://world-traveller.netlify.app/imaginarycountries
 - Back end: Server made with Express and MongoDB.
   [Code]https://github.com/serin0837/country-backend
