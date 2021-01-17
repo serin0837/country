@@ -24,15 +24,12 @@ class CreateImaginaryCountry extends Component {
       population:this.state.population,
       flag:this.state.flag
     }
-    console.log(imaginaryCountry)//WORKING 
     axios
       .post("https://country-back.herokuapp.com/api/imaginarycountries", 
         imaginaryCountry,
       )
       .then((response) => {
-        console.log(response.data);//ONLY ID AND COUNTRY
-
-     window.location="/imaginarycountries"
+        window.location="/imaginarycountries"
       });
   };
   render() {
@@ -77,7 +74,7 @@ class CreateImaginaryCountry extends Component {
         </div>
         <div className="form-group">
         <label>
-          Population:
+          Population(number):
           <input
           className="form-control"
             type="text"
