@@ -22,5 +22,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-countries.js
-script.js
+# serin
+backlog_dev.md
+/demo

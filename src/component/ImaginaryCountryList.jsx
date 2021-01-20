@@ -5,8 +5,8 @@ import Loader from "./Loader"
 
 class ImaginaryCountryList extends Component {
     state={
-        imaginarycountries:[],
-        isLoading:true,
+        imaginarycountries: [],
+        isLoading: true,
     };
 
     componentDidMount(){
@@ -14,19 +14,16 @@ class ImaginaryCountryList extends Component {
         .get("https://country-back.herokuapp.com/api/imaginarycountries")
         .then(({data})=>{
             console.log(data)
-            this.setState({imaginarycountries:data,isLoading:false});
+            this.setState({imaginarycountries: data, isLoading: false});
         })
-        .catch(error=>console.log(error))
-        
     }
 
     render() {
       if (this.state.isLoading) return <Loader/>
         return (
-           <div>
-                <CreateImaginaryCountry/>
-            <main className="imaginaryCountry">
-                
+          <div>
+            <CreateImaginaryCountry/>
+            <main className = "imaginaryCountry">
             {this.state.imaginarycountries
               .map((country) => {
                 return (
@@ -42,12 +39,12 @@ class ImaginaryCountryList extends Component {
                       <strong>Region:</strong> {country.region}
                     </li>
                     <li>
-                      <strong>Population:</strong> {country.population}
+                      <strong>Population:</strong> {country.population} 
                     </li>
                   </ul>
                 );
               })}
-          </main>
+            </main>
           </div>
         )
     }

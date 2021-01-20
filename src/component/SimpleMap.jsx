@@ -13,7 +13,7 @@ class SimpleMap extends Component {
     zoom: 0.5,
   };
 
-  state={
+  state ={
     locations:[]
   }
 
@@ -28,21 +28,21 @@ class SimpleMap extends Component {
     const {locations} = this.state
     return (
       // how can i put funtion to count marker component?
-      <div className="map" style={{ height: "90vh", width: "100%" }}>
-        <p className="mainp">Wow! You have been {locations.length} countries!!!!😎</p>
+      <div className="map" style = {{ height: "90vh", width: "100%" }}>
+        <p className="mainp"> I have been {locations.length} countries!!!!😎</p>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: "AIzaSyDP2O3fvdrPTLCE9rie_0Z9kMBdGiE2M1I" }}
-          defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}
+          bootstrapURLKeys = {{ key: "AIzaSyA_uga0gi30JufOft32qIDYAb8HAxcTdAY" }}
+          defaultCenter = {this.props.center}
+          defaultZoom = {this.props.zoom}
         >
           {locations.map((location) => {
             return (
               <Marker
-                key={location._id}
-                lat={location.lat}
-                lng={location.lng}
-                name={location.description}
-                color={location.color}
+                key = {location._id}
+                lat = {location.lat}
+                lng = {location.lng}
+                name = {location.description}
+                color = {location.color}
               />
             );
           })}
