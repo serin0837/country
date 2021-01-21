@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import axios from "axios"
 import CreateImaginaryCountry from "./CreateImaginaryCountry"
 import Loader from "./Loader"
+import ImaginaryCountryCard from "./ImaginaryCountryCard"
 
 class ImaginaryCountryList extends Component {
-    state={
-        imaginarycountries: [],
+    state = {
+        imaginaryCountries: [],
         isLoading: true,
     };
 
@@ -13,9 +14,16 @@ class ImaginaryCountryList extends Component {
         axios
         .get("https://country-back.herokuapp.com/api/imaginarycountries")
         .then(({data})=>{
-            console.log(data)
-            this.setState({imaginarycountries: data, isLoading: false});
+            this.setState({imaginaryCountries: data, isLoading: false});
         })
+    }
+
+    removeCountry = (id) => {
+      axios.delete("https://country-back.herokuapp.com/api/imaginarycountries/"+id)
+      .then(res=>{console.log(res.data)})//delete working
+      this.setState({
+        imaginaryCountries: this.state.imaginaryCountries.filter(imaginaryCountry => imaginaryCountry._id !== id)//after bind it's working
+      })
     }
 
     render() {
@@ -24,24 +32,10 @@ class ImaginaryCountryList extends Component {
           <div>
             <CreateImaginaryCountry/>
             <main className = "imaginaryCountry">
-            {this.state.imaginarycountries
+            {this.state.imaginaryCountries
               .map((country) => {
                 return (
-                  <ul key={country._id}>
-                    <li className="countryTitle">{country.name}</li>
-                    <li>
-                      <img src={country.flag} alt={country.name}></img>
-                    </li>
-                    <li>
-                      <strong>Capital:</strong> {country.capital}
-                    </li>
-                    <li>
-                      <strong>Region:</strong> {country.region}
-                    </li>
-                    <li>
-                      <strong>Population:</strong> {country.population} 
-                    </li>
-                  </ul>
+                  <ImaginaryCountryCard country = {country} key = {country._id} removeCountry = {this.removeCountry}/>
                 );
               })}
             </main>

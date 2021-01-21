@@ -63,12 +63,12 @@ class CreateImaginaryCountry extends Component {
         </div>
         <div className = "form-group">
         <label>
-          region
+          Region:
           <input
-          className="form-control"
-            type="text"
-            onChange={this.handleInput}
-            name="region"
+            className = "form-control"
+            type = "text"
+            onChange = {this.handleInput}
+            name = "region"
             required
           ></input>
         </label>
@@ -77,22 +77,22 @@ class CreateImaginaryCountry extends Component {
         <label>
           Population(number):
           <input
-          className="form-control"
-            type="text"
-            onChange={this.handleInput}
-            name="population"
+            className = "form-control"
+            type = "text"
+            onChange = {this.handleInput}
+            name = "population"
             required
           ></input>
         </label>
         </div>
         <div className = "form-group">
         <label>
-          Image:
+          Image(URL please!):
           <input
-          className="form-control"
-            type="text"
-            onChange={this.handleInput}
-            name="flag"
+            className = "form-control"
+            type = "text"
+            onChange = {this.handleInput}
+            name = "flag"
             required
           ></input>
         </label>

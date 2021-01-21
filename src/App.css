@@ -81,7 +81,7 @@ footer p {
   margin: 2rem;
 }
 
-.footer .fa {
+.fa {
   padding: 10px;
   font-size: 1.5rem;
   width: 7x;
@@ -92,7 +92,7 @@ footer p {
   color: #42d7e6;
 }
 
-.footer .fa:hover {
+.fa:hover {
   color: darkslategray;
 }
 
@@ -107,6 +107,7 @@ footer p {
 
 .imaginary-country-form {
   text-align: center;
+  margin-top: 10px;
 }
 
 .imaginaryCountry img {

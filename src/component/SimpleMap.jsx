@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
 import Marker from "./Marker";
 import axios from "axios"
-
+import Loader from "./Loader"
 
 class SimpleMap extends Component {
   static defaultProps = {
@@ -13,21 +13,22 @@ class SimpleMap extends Component {
     zoom: 0.5,
   };
 
-  state ={
-    locations:[]
+  state = {
+    locations: [],
+    isLoading: true
   }
 
   componentDidMount() {
     axios
       .get(`https://country-back.herokuapp.com/api/locations`)
       .then(({ data }) => {
-        this.setState({ locations: data });
+        this.setState({ locations: data, isLoading: false });
       });
   }
   render() {
-    const {locations} = this.state
+    const { locations, isLoading } = this.state
+    if(isLoading) return <Loader/>
     return (
-      // how can i put funtion to count marker component?
       <div className="map" style = {{ height: "90vh", width: "100%" }}>
         <p className="mainp"> I have been {locations.length} countries!!!!😎</p>
         <GoogleMapReact
