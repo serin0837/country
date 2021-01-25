@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 const ImaginaryCountryCard = ({country, removeCountry}) => {
     const handleClick = (clickEvent) => {
@@ -22,7 +23,7 @@ const ImaginaryCountryCard = ({country, removeCountry}) => {
                     <strong>Population:</strong> {country.population} 
                 </li>
                 <i onClick = {handleClick} id = {country._id} className="fa fa-trash-o"></i>
-                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                <Link to={`/imaginarycountries/${country._id}`}><i className="fa fa-pencil-square-o" aria-hidden="true"></i></Link>
             </ul>            
         </div>
     );

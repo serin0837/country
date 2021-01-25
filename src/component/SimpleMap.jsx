@@ -30,7 +30,7 @@ class SimpleMap extends Component {
     if(isLoading) return <Loader/>
     return (
       <div className="map" style = {{ height: "90vh", width: "100%" }}>
-        <p className="mainp"> I have been {locations.length} countries!!!!😎</p>
+        <p className="mainp"> I have been {locations.length} countries!</p>
         <GoogleMapReact
           bootstrapURLKeys = {{ key: "AIzaSyA_uga0gi30JufOft32qIDYAb8HAxcTdAY" }}
           defaultCenter = {this.props.center}

@@ -44,7 +44,7 @@ class Footer extends Component {
         </div>
 
         <div>
-          <p> Serin Jeon &copy;All Rights Reserved</p>
+          <p>&copy; 2020. Serin Jeon - all rights reserved</p>
         </div>
       </footer>
     );

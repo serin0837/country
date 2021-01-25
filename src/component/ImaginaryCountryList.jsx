@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from "axios"
-import CreateImaginaryCountry from "./CreateImaginaryCountry"
 import Loader from "./Loader"
 import ImaginaryCountryCard from "./ImaginaryCountryCard"
 
@@ -30,7 +29,6 @@ class ImaginaryCountryList extends Component {
       if (this.state.isLoading) return <Loader/>
         return (
           <div>
-            <CreateImaginaryCountry/>
             <main className = "imaginaryCountry">
             {this.state.imaginaryCountries
               .map((country) => {

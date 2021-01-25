@@ -5,10 +5,12 @@ body {
 }
 
 .navbar-item {
+  display: flex;
   font-size: 20px;
+  align-items: center;
 }
 .logo {
-  height: 80px;
+  height: 60px;
 }
 
 .country img {
@@ -49,7 +51,7 @@ body {
 .loader {
   text-align: center;
   font-size: 1.8rem;
-  margin: 10rem;
+  margin: 11rem;
 }
 
 /* marker */

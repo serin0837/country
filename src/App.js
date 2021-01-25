@@ -6,12 +6,14 @@ import CountryList from "./component/CountryList";
 import Footer from "./component/Footer";
 import logo from "./logo.png";
 import ImaginaryCountryList from "./component/ImaginaryCountryList";
+import EditImaginaryCountry from "./component/EditImaginaryCountry";
+import CreateImaginaryCountry from "./component/CreateImaginaryCountry";
 
 function App() {
   return (
     <div className="App">
       <nav className="navbar bg-light navbar-expand-lg navbar-light">
-        <ul className="navbar-nav mr-auto">
+        <ul className="navbar-nav">
           <li className="navbar-item">
             <Link to="/" className="nav-link">
               <img src={logo} alt="logo" className="logo" />
@@ -24,7 +26,12 @@ function App() {
           </li>
           <li className="navbar-item">
             <Link to="/country" className="nav-link">
-              Country
+              Country Information
+            </Link>
+          </li>
+          <li className="navbar-item">
+            <Link to="/createimaginarycountry" className="nav-link">
+              Create Imaginary Country 
             </Link>
           </li>
           <li className="navbar-item">
@@ -36,8 +43,10 @@ function App() {
       </nav>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/country" component={CountryList} />
-        <Route path="/imaginarycountries" component={ImaginaryCountryList} />
+        <Route path="/country" exact component={CountryList} />
+        <Route path="/imaginarycountries" exact component={ImaginaryCountryList} />
+        <Route path ="/createimaginarycountry" exact component = {CreateImaginaryCountry}/>
+        <Route path ="/imaginarycountries/:id" exact component = {EditImaginaryCountry}/>
       </Switch>
       <Footer />
     </div>
