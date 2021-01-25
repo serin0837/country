@@ -107,9 +107,10 @@ footer p {
   font-size: large;
 }
 
-.imaginary-country-form {
-  text-align: center;
-  margin-top: 10px;
+.form-control {
+  max-width: 300px;
+  display: inline;
+  margin-left: 1rem;
 }
 
 .imaginaryCountry img {

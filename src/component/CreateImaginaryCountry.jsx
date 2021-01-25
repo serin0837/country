@@ -37,10 +37,9 @@ class CreateImaginaryCountry extends Component {
   render() {
     return (
       <form className = "imaginary-country-form container" onSubmit = {this.handleSubmit}>
-        <p>Add an imaginary country</p>
+        <h3 style={{margin: "2rem"}}>Add an imaginary country</h3>
         <div className = "form-group">
-        <label>
-          Name:
+        <label>Name:</label>
           <input
             className = "form-control"
             type = "text"
@@ -48,11 +47,9 @@ class CreateImaginaryCountry extends Component {
             name = "name"
             required
           ></input>
-        </label>
         </div>
         <div className = "form-group">
-        <label>
-          Capital:
+        <label>Capital:  </label>
           <input
             className = "form-control"
             type = "text"
@@ -60,11 +57,9 @@ class CreateImaginaryCountry extends Component {
             name = "capital"
             required
           ></input>
-        </label>
         </div>
         <div className = "form-group">
-        <label>
-          Region:
+        <label>Region: </label>
           <input
             className = "form-control"
             type = "text"
@@ -72,11 +67,9 @@ class CreateImaginaryCountry extends Component {
             name = "region"
             required
           ></input>
-        </label>
         </div>
         <div className = "form-group">
-        <label>
-          Population(number):
+        <label>Population(number):</label>
           <input
             className = "form-control"
             type = "text"
@@ -84,11 +77,9 @@ class CreateImaginaryCountry extends Component {
             name = "population"
             required
           ></input>
-        </label>
         </div>
         <div className = "form-group">
-        <label>
-          Image(URL please!):
+        <label>Image(URL please!):</label>
           <input
             className = "form-control"
             type = "text"
@@ -96,10 +87,9 @@ class CreateImaginaryCountry extends Component {
             name = "flag"
             required
           ></input>
-        </label>
         </div>
         <div className = "form-group">
-          <button  className="btn btn-primary" type="submit">Add your Imaginary Country!</button>
+          <button  className="btn btn-primary" type="submit">Create</button>
         </div>
       </form>
     );

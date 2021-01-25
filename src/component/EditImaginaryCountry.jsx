@@ -54,10 +54,9 @@ class EditImaginaryCountry extends Component {
   render() {
     return (
       <form className = "imaginary-country-form container" onSubmit = {this.handleSubmit}>
-        <p>Edit an imaginary country</p>
+        <h3 style={{margin: "2rem"}}>Edit an imaginary country</h3>
         <div className = "form-group">
-        <label>
-          Name:
+        <label>Name: </label>
           <input
             className = "form-control"
             type = "text"
@@ -66,11 +65,9 @@ class EditImaginaryCountry extends Component {
             value = {this.state.name}
             required
           ></input>
-        </label>
         </div>
         <div className = "form-group">
-        <label>
-          Capital:
+        <label> Capital:</label>
           <input
             className = "form-control"
             type = "text"
@@ -79,11 +76,9 @@ class EditImaginaryCountry extends Component {
             value = {this.state.capital}
             required
           ></input>
-        </label>
         </div>
         <div className = "form-group">
-        <label>
-          Region:
+        <label>Region: </label>
           <input
             className = "form-control"
             type = "text"
@@ -92,11 +87,9 @@ class EditImaginaryCountry extends Component {
             value = {this.state.region}
             required
           ></input>
-        </label>
         </div>
         <div className = "form-group">
-        <label>
-          Population(number):
+        <label>Population(number):</label>
           <input
             className = "form-control"
             type = "text"
@@ -105,11 +98,9 @@ class EditImaginaryCountry extends Component {
             name = "population"
             required
           ></input>
-        </label>
         </div>
         <div className = "form-group">
-        <label>
-          Image(URL please!):
+        <label>Image(URL please!):</label>
           <input
             className = "form-control"
             type = "text"
@@ -118,10 +109,9 @@ class EditImaginaryCountry extends Component {
             value = {this.state.flag}
             required
           ></input>
-        </label>
         </div>
         <div className = "form-group">
-          <button  className="btn btn-primary" type="submit">Update your Imaginary Country!</button>
+          <button  className="btn btn-primary" type="submit">Update</button>
         </div>
       </form>
     );
