@@ -45,10 +45,9 @@ class EditImaginaryCountry extends Component {
     }
     console.log(imaginaryCountry)
     axios.patch("https://country-back.herokuapp.com/api/imaginarycountries/"+this.props.match.params.id, imaginaryCountry)
-    .then((res) => {
-        console.log(res.data)
-        window.location = "/imaginarycountries"
-        })
+    .then((res) => 
+        window.location.href = "https://world-traveller.netlify.app/imaginarycountries"
+        )
     }
         
   render() {

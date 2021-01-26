@@ -30,7 +30,7 @@ class CreateImaginaryCountry extends Component {
         imaginaryCountry,
       )
       .then((response) => {
-        window.location = "./imaginarycountries"
+        window.location = "https://world-traveller.netlify.app/imaginarycountries"
       });
   };
 
