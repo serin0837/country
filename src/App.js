@@ -42,7 +42,7 @@ function App() {
         </ul>
       </nav>
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route path="/" exact component={Home} />
         <Route path="/country" exact component={CountryList} />
         <Route path="/imaginarycountries" exact component={ImaginaryCountryList} />
         <Route path ="/createimaginarycountry" exact component = {CreateImaginaryCountry}/>
