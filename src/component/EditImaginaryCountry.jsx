@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Redirect } from 'react-router-dom'
 
 class EditImaginaryCountry extends Component {
     state = {
@@ -8,7 +9,7 @@ class EditImaginaryCountry extends Component {
         region: "",
         population: "",
         flag: "",
-
+        redirect: false
     };
 
     componentDidMount() {
@@ -43,11 +44,16 @@ class EditImaginaryCountry extends Component {
         population: this.state.population,
         flag: this.state.flag
     }
-    console.log(imaginaryCountry)
     axios.patch("https://country-back.herokuapp.com/api/imaginarycountries/"+this.props.match.params.id, imaginaryCountry)
     .then((res) => 
-        window.location.href = "https://world-traveller.netlify.app/imaginarycountries"
+          this.setState({redirect:true})
         )
+    }
+
+    renderRedirect = () => {
+      if (this.state.redirect) {
+        return <Redirect to='/imaginarycountries' />
+      }
     }
         
   render() {
@@ -111,6 +117,7 @@ class EditImaginaryCountry extends Component {
         </div>
         <div className = "form-group">
           <button  className="btn btn-primary" type="submit">Update</button>
+          {this.renderRedirect()}
         </div>
       </form>
     );

@@ -20,3 +20,7 @@ You can :
 ## Future Improvements
 
 - Feature to add data by users. (Implement Google OAuth or create own data table to login)
+
+## Potential Issues
+
+- Data security
