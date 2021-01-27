@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Redirect } from 'react-router-dom'
 
 class CreateImaginaryCountry extends Component {
   state = {
@@ -8,6 +9,7 @@ class CreateImaginaryCountry extends Component {
     region: "",
     population: "",
     flag: "",
+    redirect: false
   };
 
   handleInput = (event) => {
@@ -30,9 +32,14 @@ class CreateImaginaryCountry extends Component {
         imaginaryCountry,
       )
       .then((response) => {
-        window.location = "https://world-traveller.netlify.app/imaginarycountries"
+        this.setState({redirect: true})
       });
   };
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      return <Redirect to='/imaginarycountries' />
+    }
+  }
 
   render() {
     return (
@@ -90,6 +97,7 @@ class CreateImaginaryCountry extends Component {
         </div>
         <div className = "form-group">
           <button  className="btn btn-primary" type="submit">Create</button>
+          {this.renderRedirect()}
         </div>
       </form>
     );

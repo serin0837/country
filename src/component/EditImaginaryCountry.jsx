@@ -46,7 +46,7 @@ class EditImaginaryCountry extends Component {
     }
     axios.patch("https://country-back.herokuapp.com/api/imaginarycountries/"+this.props.match.params.id, imaginaryCountry)
     .then((res) => 
-          this.setState({redirect:true})
+          this.setState({redirect: true})
         )
     }
 
