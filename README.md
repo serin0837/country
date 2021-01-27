@@ -13,9 +13,10 @@ You can :
 ## Technologies
 
 - Front end: Responsive website built with React, Router, Axios and Bootstrap.
-  [Live](https://world-traveller.netlify.app/)👈
+  [🔗Live](https://world-traveller.netlify.app/)
 - Back end: Server made with Express and MongoDB.
-  [Live](https://country-back.herokuapp.com/api/countries)👈
+  [🔗Live](https://country-back.herokuapp.com/api/countries)
+  [💻Code](https://github.com/serin0837/country-backend)
 
 ## Future Improvements
 
